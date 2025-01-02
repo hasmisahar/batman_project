@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 conn = 'sqlite:///gjy.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = conn
+app.config['SQLALCHEY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 db = SQLAlchemy(app)
 
