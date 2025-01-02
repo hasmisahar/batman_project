@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-conn = 'mysql+pymysql://root:root@localhost/batman'
+conn = 'sqlite:///gjy.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = conn
 api = Api(app)
 db = SQLAlchemy(app)
